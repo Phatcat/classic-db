@@ -16901,6 +16901,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1450604','14506','0','0','100','1','9000','13000','14000','17000','11','20989','5','1','0','0','0','0','0','0','0','0','Lord Hel\'nurath - Cast Sleep'),
 ('1450605','14506','4','0','100','0','0','0','0','0','1','-1461','0','0','0','0','0','0','0','0','0','0','Lord Hel\'nurath - Yell on Aggro'),
 -- Ancient Equine Spirit     14566
+-- Revanchion (14690)
+('1469001','14690','27','0','100','1','22645','1','1000','2000','11','22645','0','0','0','0','0','0','0','0','0','0','Revanchion - Cast Frost Nova (Passive, procced) on Missing Aura'),
+('1469002','14690','0','0','100','1','3000','5000','5000','7000','11','20741','4','0','0','0','0','0','0','0','0','0','Revanchion - Cast Shadow Bolt Volley'),
 -- Spectral Stalker (16093) - NSR
 -- Falrin Treeshaper     16032
 -- Spectral Stalker     16093
@@ -17460,6 +17463,14 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Frost Spectre
 ('858501','8585','7','0','100','0','0','0','0','0','41','0','0','0','0','0','0','0','0','0','0','0','Frost Spectre - Despawn on Evade'),
 ('858502','8585','14','0','100','0','8700','100','0','0','41','0','0','0','0','0','0','0','0','0','0','0','Frost Spectre - Despawn on Ammenars Death'),
+-- Lady Falther'ess (14686)
+('1468601','14686','0','0','100','1','8000','8000','16000','16000','11','16838','1','0','0','0','0','0','0','0','0','0','Lady Falther\'ess - Cast  Banshee Shriek'),
+('1468602','14686','27','0','100','1','17105','1','3000','5000','11','17105','1','0','0','0','0','0','0','0','0','0','Lady Falther\'ess - Cast Banshee Curse on Target Missing Aura'),
+('1468603','14686','0','0','100','1','15000','25000','25000','45000','11','7645','4','0','0','0','0','0','0','0','0','0', 'Lady Falther\'ess - Cast Dominate Mind'),
+('1468604','14686','0','0','100','1','3000','3000','6000','6000','11','22743','8','0','0','0','0','0','0','0','0','0','Lady Falther\'ess - Cast Ribbon of Souls'),
+('1468605','14686','4','0','100','1','0','0','0','0','3','0','10698','0','1','-1060','0','0','0','0','0','0','Lady Falther\'ess - Transforms into Lich on Aggro and Yells'),
+('1468606','14686','7','0','100','1','0','0','0','0','3','0','4558','0','2','35','0','0','0','0','0','0','Lady Falther\'ess - Transforms into Lich on Evade and set friendly faction'),
+('1468607','14686','10', '0', '100', '1','1','5','1000','3000','2','21','0','0','0','0','0','0','0','0','0','0','Lady Falther\'ess - Set Scourge Faction on LOS'),
 
 
 
@@ -18104,7 +18115,17 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Aspect of Malice (14520) - (Quest NPC?)
 -- Aspect of Shadow (14521) - (Quest NPC?)
 -- Darkreaver's Fallen Charger (14568)
--- Lord Blackwood (14695)
+-- Lord Blackwood (14695) - Scourge Invasion Event (Move to sd2? 1469507 needs to be optimized to only be cast on those affected by the Black Arrow debuff while they died)
+('1469501','14695','4','0','100','2','0','0','0','0','49','1','0','0','20','0','0','0','0','0','0','0','Lord Blackwood - Enable Dynamic Movement and Prevent Melee on Aggro'),
+('1469502','14695','9','5','100','1','8','30','2000','2000','11','28317','1','0','0','0','0','0','0','0','0','0','Lord Blackwood - Cast Shoot (Phase 1)'),
+('1469503','14695','9','0','100','3','9','80','1000','1000','49','1','0','0','0','0','0','0','0','0','0','0','Lord Blackwood - Enable Dynamic Movement at 9-80 Yards'),
+('1469504','14695','9','0','100','1','0','8','1000','1000','49','0','0','0','20','1','0','0','40','1','0','0','Lord Blackwood - Disable Dynamic Movement and Enable Melee and Set Melee Weapon Model at 0-8 Yards'),
+('1469505','14695','13','0','100','1','8000','12000','0','0','11','11972','1','0','0','0','0','0','0','0','0','0','Lord Blackwood - Cast Shield Bash'),
+('1469506','14695','28','0','100','1','20733','1','2000','5000','11','20733','1','0','0','0','0','0','0','0','0','0','Lord Blackwood - Cast Black Arrow (Debuff) on Missing Aura'),
+('1469507','14695','5','0','100','1','1000','1000','0','0','11','20734','1','0','0','0','0','0','0','0','0','0','Lord Blackwood - Cast Black Arrow on Kill'),
+('1469508','14695','0','0','100','1','15000','25000','20000','35000','11','7964','0','0','0','0','0','0','0','0','0','0','Lord Blackwood - Cast Smoke Bomb'),
+('1469509','14695','32','0','100','1','6','30','5000','6000','11','21390','1','0','0','0','0','0','0','0','0','0','Lord Blackwood - Cast Multi-Shot'),
+('1469510','14695','7','0','100','2','0','0','0','0','40','1','0','0','0','0','0','0','0','0','0','0','Lord Blackwood - Set Melee Weapon Model on Evade'),
 -- Blood Steward of Kirtonos (3.0.3 Official Data - Logs Only)
 ('1486101','14861','0','0','100','1','19400','19700','4200','22900','11','22371','1','32','0','0','0','0','0','0','0','0','Blood Steward of Kirtonos - Cast Curse of Impotence'),
 ('1486102','14861','0','0','100','1','6100','18200','3600','22600','11','12493','1','32','0','0','0','0','0','0','0','0','Blood Steward of Kirtonos - Cast Curse of Weakness'),
@@ -18196,18 +18217,22 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('427403','4274','6','0','100','0','0','0','0','0','34','3','3','0','0','0','0','0','0','0','0','0','Fenrus the Devourer - Set Instance Data on Death'),
 ('427404','4274','7','0','100','0','0','0','0','0','34','3','2','0','0','0','0','0','0','0','0','0','Fenrus the Devourer - Set Instance Data on Evade'),
 -- Archmage Arugal (4275) - boss_arugal
--- Commander Springvale (3.0.3 Official Data)
+-- Commander Springvale (4278) - (3.0.3 Official Data)
 ('427801','4278','0','0','100','1','10300','17800','61100','63500','11','5588','1','0','0','0','0','0','0','0','0','0','Commander Springvale - Cast Hammer of Justice'),
 ('427802','4278','14','0','100','1','800','40','17500','22300','11','1026','6','1','0','0','0','0','0','0','0','0','Commander Springvale - Cast Holy Light on Friendlies'),
--- Odo the Blindwatcher (3.0.3 Official Data)
+-- Odo the Blindwatcher (4279) - (3.0.3 Official Data)
 ('427901','4279','4','0','100','0','0','0','0','0','39','30','0','0','0','0','0','0','0','0','0','0','Odo the Blindwatcher - Call For Help on Aggro'),
 ('427902','4279','2','0','100','0','60','0','0','0','11','7481','0','0','0','0','0','0','0','0','0','0','Odo the Blindwatcher - Cast Howling Rage at 75% HP'),
 ('427903','4279','2','0','100','0','40','0','0','0','11','7483','0','0','0','0','0','0','0','0','0','0','Odo the Blindwatcher - Cast Howling Rage at 50% HP'),
 ('427904','4279','2','0','100','0','20','0','0','0','11','7484','0','0','0','0','0','0','0','0','0','0','Odo the Blindwatcher - Cast Howling Rage at 25% HP'),
 -- Deathstalker Vincent (4444) - npc_deathstalker_vincent
 -- Arugal's Voidwalker (4627) - mob_arugal_voidwalker
--- Wolfguard Worg (3.0.3 Official Data)
+-- Wolfguard Worg (5058) - (3.0.3 Official Data)
 ('505801','5058','2','0','100','0','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Wolfguard Worg - Flee at 15% HP'),
+-- Sever (14682) - Scourge Invasion Event
+('1468201','14682','0','0','100','1','6000','6000','12000','12000','11','17745','1','0','0','0','0','0','0','0','0','0','Sever - Cast Diseased Spit'),
+('1468203','14682','0','0','100','1','25000','40000','45000','60000','11','16508','1','0','0','0','0','0','0','0','0','0','Sever - Cast Intimidating Roar'),
+('1468204','14682','2','0','100','0','30','0','0','0','11','8599','0','0','1','-46','0','0','0','0','0','0','Sever - Cast Enrage at 30% HP'),
 
 
 
@@ -18519,7 +18544,16 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1114306','11143','0','0','100','1','18000','20000','18000','20000','11','12741','0','0','0','0','0','0','0','0','0','0','Postmaster Malown - Cast Curse of Weakness'),
 ('1114307','11143','0','0','100','1','20000','23000','20000','23000','11','13338','4','0','0','0','0','0','0','0','0','0','Postmaster Malown - Cast Curse of Tongues'),
 -- Mindless Skeleton (11197) - NSR
--- Balzaphon (14684) - NSR
+-- Balzaphon (14684)
+('1468401','14684','4','0','100','2','0','0','0','0','49','1','0','0','22','1','0','0','0','0','0','0','Balzaphon - Enable Dynamic Movement and Set Phase 1 on Aggro'),
+('1468402','14684','9','5','100','1','8','45','2500','3000','11','21369','1','0','0','0','0','0','0','0','0','0','Balzaphon - Cast Frostbolt'),
+('1468403','14684','9','5','100','3','9','80','1000','1000','49','1','0','0','0','0','0','0','0','0','0','0','Balzaphon - Enable Dynamic Movement at 9-80 Yards (Phase 1)'),
+('1468404','14684','9','0','100','3','0','8','1000','1000','49','0','0','0','0','0','0','0','0','0','0','0','Balzaphon - Disable Dynamic Movement at 0-8 Yards'),
+('1468405','14684','3','5','100','2','7','0','0','0','49','0','0','0','22','2','0','0','0','0','0','0','Balzaphon - Disable Dynamic Movement and Set Phase 2 when Mana is at 7% (Phase 1)'),
+('1468406','14684','3','3','100','3','100','15','1000','1000','22','1','0','0','0','0','0','0','0','0','0','0','Balzaphon - Set Phase 1 when Mana is above 15% (Phase 2)'),
+('1468407','14684','9','5','100','1','0','7','10000','12000','11','15244','1','0','0','0','0','0','0','0','0','0','Balzaphon - Cast Cone of Cold'),
+('1468408','14684','0','5','100','1','8000','8000','16000','16000','11','8398','1','0','0','0','0','0','0','0','0','0','Balzaphon - Cast Frostbolt Volley'),
+('1468409','14684','0','5','100','1','12000','15000','27000','30000','11','12096','8','0','0','0','0','0','0','0','0','0','Balzaphon - Cast Fear'),
 -- Elder Farwhisper (15607) - NSR
 -- Ysida Harmon (16031) - NSR
 -- Jarien
